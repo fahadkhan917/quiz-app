@@ -71,6 +71,7 @@ for(var i=0;i<questionArr.length;i++){
 }
 
 var questioncount=0;
+var score=0;
 
 
 function nextques(){
@@ -78,14 +79,33 @@ function nextques(){
 var next=document.getElementById("next");
 questioncount++;
 showquestion(questioncount);
+removeActiveClass();
+validate();
 
 
 }
 
 function putActiveclass(e){
+    removeActiveClass();
 e.classList.add("active");
 
 
 }
+function removeActiveClass(){
+    var active=document.getElementsByClassName("active");
+    for(var i=0;i<active.length;i++){
+
+active[i].classList.remove("active");
  
+    }
+    
+    
+    }
  
+
+    function validate(){
+
+        var active=document.getElementsByClassName("active");
+        console.log(active)
+
+    }
