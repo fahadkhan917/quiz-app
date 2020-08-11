@@ -76,11 +76,12 @@ var score=0;
 
 function nextques(){
 
-var next=document.getElementById("next");
+// var next=document.getElementById("next");
 questioncount++;
-showquestion(questioncount);
+validate(questioncount);
+
 removeActiveClass();
-validate();
+showquestion(questioncount);
 
 
 }
@@ -103,9 +104,16 @@ active[i].classList.remove("active");
     }
  
 
-    function validate(){
+    function validate(e){
 
         var active=document.getElementsByClassName("active");
-        console.log(active)
+    if(active[0].innerHTML==questionArr[e].answer){
+   score=score+10;
+   console.log(score);
+
+
+    }
+    
+ 
 
     }
