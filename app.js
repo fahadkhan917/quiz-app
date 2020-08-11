@@ -28,25 +28,60 @@ options:[
     "web matrix",
     
 ]
+},
+{question:"LCD stand for?",
+answer:"liquid crystal display",
+options:[
+    "li crystal display",
+    "liquid crystal display",
+    "crystal display",
+    
+]
+},
+{question:"pakistan captial is?",
+answer:"Islamabad",
+options:[
+    "karachi",
+    "quetta",
+    "Islamabad",
+    
+]
 }
 
 ];
 
 
-function showquestion(){
+function showquestion(e){
 //show question
 var qu=document.getElementById('q1_ele');
-qu.innerHTML=questionArr[0].question;
+qu.innerHTML=questionArr[e].question;
 
 //show option
-var op1_1=document.getElementById("op1_1");
-var op1_2=document.getElementById("op1_2");
-var op1_3=document.getElementById("op1_3");
-op1_1.innerHTML=questionArr[0].options[0];
-op1_2.innerHTML=questionArr[0].options[1];
-op1_3.innerHTML=questionArr[0].options[2];
+var optionelement=document.getElementsByClassName("optionElement");
+for(var i=0;i<questionArr.length;i++){
+
+
+    optionelement[i].innerHTML=questionArr[e].options[i];
+
+}
+
+
 
 
 }
 
+var questioncount=0;
+
+
+function nextques(){
+
+var next=document.getElementById("next");
+questioncount++;
+showquestion(questioncount);
+
+
+}
+
+
+ 
  
