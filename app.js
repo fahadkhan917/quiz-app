@@ -82,6 +82,10 @@ showquestion(questioncount);
 
 }
 
+function putActiveclass(e){
+e.classList.add("active");
 
+
+}
  
  

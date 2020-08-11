@@ -6,6 +6,19 @@
     <title>Quiz app</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+.optionElement:hover{
+background-color: lightblue;
+
+}
+.active{
+
+    background-color: lightblue;
+
+}
+
+
+    </style>
 
 </head>
 <body onload="showquestion(0)">
@@ -41,9 +54,9 @@
               <h5 class="card-title"></h5>
               <p class="card-text" id="q1_ele">With supporting text below as a natural lead-in to additional content.</p>
               <ul class="list-group list-group-flush">
-               <p class="card-text optionElement p-2">Option1</p>
-               <p class="card-text optionElement p-2">Option2</p>
-               <p class="card-text optionElement p-2">Option3</p>
+               <p class="card-text optionElement p-2" onclick="putActiveclass(this)">Option1</p>
+               <p class="card-text optionElement p-2" onclick="putActiveclass(this)">Option2</p>
+               <p class="card-text optionElement p-2" onclick="putActiveclass(this)">Option3</p>
               </ul>
               <br>
               <br>
