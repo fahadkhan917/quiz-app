@@ -26,16 +26,27 @@ options:[
     "Web Browser",
     "Web server",
     "web matrix",
-    "None of the mentioned"
+    
 ]
 }
 
 ];
 
 
-function show(){
-
+function showquestion(){
+//show question
 var qu=document.getElementById('q1_ele');
 qu.innerHTML=questionArr[0].question;
 
+//show option
+var op1_1=document.getElementById("op1_1");
+var op1_2=document.getElementById("op1_2");
+var op1_3=document.getElementById("op1_3");
+op1_1.innerHTML=questionArr[0].options[0];
+op1_2.innerHTML=questionArr[0].options[1];
+op1_3.innerHTML=questionArr[0].options[2];
+
+
 }
+
+ 
