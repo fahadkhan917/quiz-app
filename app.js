@@ -32,3 +32,10 @@ options:[
 
 ];
 
+
+function show(){
+
+var qu=document.getElementById('q1_ele');
+qu.innerHTML=questionArr[0].question;
+
+}
